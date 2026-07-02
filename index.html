@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyAI</title>
+
+<style>
+
+body{
+
+margin:0;
+
+font-family:Arial;
+
+background:#eef3ff;
+
+}
+
+header{
+
+background:#2563eb;
+
+padding:20px;
+
+color:white;
+
+text-align:center;
+
+}
+
+.hero{
+
+text-align:center;
+
+padding:40px;
+
+}
+
+input{
+
+width:80%;
+
+max-width:400px;
+
+padding:15px;
+
+border-radius:10px;
+
+border:1px solid gray;
+
+font-size:18px;
+
+}
+
+button{
+
+margin-top:20px;
+
+padding:15px 25px;
+
+border:none;
+
+border-radius:10px;
+
+background:#2563eb;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+.card{
+
+background:white;
+
+max-width:500px;
+
+margin:30px auto;
+
+padding:20px;
+
+border-radius:15px;
+
+box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🤖 StudyAI</h1>
+
+<p>Dein kostenloser KI-Lernhelfer</p>
+
+</header>
+
+<div class="hero">
+
+<div class="card">
+
+<h2>Lernkarten erstellen</h2>
+
+<input id="thema" placeholder="z.B. Photosynthese">
+
+<br>
+
+<button onclick="lernen()">
+
+Lernkarten erstellen
+
+</button>
+
+<div id="ausgabe"></div>
+
+</div>
+
+</div>
+
+<script>
+
+function lernen(){
+
+let thema=document.getElementById("thema").value;
+
+if(thema==""){
+
+alert("Bitte gib ein Thema ein.");
+
+return;
+
+}
+
+document.getElementById("ausgabe").innerHTML=
+
+"<h3>📚 Deine Lernkarten</h3>"+
+
+"<p><b>Frage:</b> Was ist "+thema+"?</p>"+
+
+"<p><b>Frage:</b> Erkläre "+thema+" mit eigenen Worten.</p>"+
+
+"<p><b>Frage:</b> Warum ist "+thema+" wichtig?</p>";
+
+}
+
+</script>
+
+</body>
+
+</html>
