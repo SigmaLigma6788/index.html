@@ -115,3 +115,48 @@ document.getElementById("antwort").innerHTML=`
 
 </body>
 </html>
+<script>
+
+function createCards(){
+
+let topic=document.getElementById("topic").value;
+
+if(topic==""){
+
+alert("Bitte gib zuerst ein Thema ein.");
+
+return;
+
+}
+
+document.getElementById("output").innerHTML=`
+
+<h2>📖 Deine Lernkarten</h2>
+
+<div class="flashcard">
+<h3>❓ Was ist ${topic}?</h3>
+<p>Beschreibe die wichtigsten Grundlagen von <b>${topic}</b>.</p>
+</div>
+
+<div class="flashcard">
+<h3>🧠 Erkläre ${topic}</h3>
+<p>Versuche das Thema mit deinen eigenen Worten zu erklären.</p>
+</div>
+
+<div class="flashcard">
+<h3>⭐ Warum ist ${topic} wichtig?</h3>
+<p>Nenne mindestens drei Gründe, warum <b>${topic}</b> wichtig ist.</p>
+</div>
+
+<div class="flashcard">
+<h3>📝 Mini-Quiz</h3>
+<p>Kannst du 5 Fakten über <b>${topic}</b> aufzählen, ohne nachzuschauen?</p>
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
