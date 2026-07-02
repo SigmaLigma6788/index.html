@@ -1,130 +1,84 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>StudyAI</title>
 
 <style>
-
 body{
-
 margin:0;
-
-font-family:Arial;
-
+font-family:Arial,sans-serif;
 background:#eef3ff;
-
 }
 
 header{
-
 background:#2563eb;
-
-padding:20px;
-
 color:white;
-
+padding:30px;
 text-align:center;
-
-}
-
-.hero{
-
-text-align:center;
-
-padding:40px;
-
-}
-
-input{
-
-width:80%;
-
-max-width:400px;
-
-padding:15px;
-
-border-radius:10px;
-
-border:1px solid gray;
-
-font-size:18px;
-
-}
-
-button{
-
-margin-top:20px;
-
-padding:15px 25px;
-
-border:none;
-
-border-radius:10px;
-
-background:#2563eb;
-
-color:white;
-
-font-size:18px;
-
-cursor:pointer;
-
 }
 
 .card{
-
 background:white;
-
-max-width:500px;
-
-margin:30px auto;
-
-padding:20px;
-
-border-radius:15px;
-
-box-shadow:0 0 15px rgba(0,0,0,.15);
-
+max-width:600px;
+margin:40px auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+text-align:center;
 }
 
+input{
+width:90%;
+padding:15px;
+font-size:18px;
+border-radius:10px;
+border:2px solid #2563eb;
+}
+
+button{
+margin-top:20px;
+padding:15px 30px;
+font-size:18px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+#antwort{
+margin-top:30px;
+text-align:left;
+}
 </style>
 
 </head>
-
 <body>
 
 <header>
-
 <h1>🤖 StudyAI</h1>
-
-<p>Dein kostenloser KI-Lernhelfer</p>
-
+<p>Dein KI-Lernassistent</p>
 </header>
-
-<div class="hero">
 
 <div class="card">
 
-<h2>Lernkarten erstellen</h2>
+<h2>Was möchtest du lernen?</h2>
 
 <input id="thema" placeholder="z.B. Photosynthese">
 
 <br>
 
 <button onclick="lernen()">
-
 Lernkarten erstellen
-
 </button>
 
-<div id="ausgabe"></div>
-
-</div>
+<div id="antwort"></div>
 
 </div>
 
@@ -132,30 +86,32 @@ Lernkarten erstellen
 
 function lernen(){
 
-let thema=document.getElementById("thema").value;
+let thema=document.getElementById("thema").value.trim();
 
 if(thema==""){
-
-alert("Bitte gib ein Thema ein.");
-
+alert("Bitte ein Thema eingeben.");
 return;
-
 }
 
-document.getElementById("ausgabe").innerHTML=
+document.getElementById("antwort").innerHTML=`
 
-"<h3>📚 Deine Lernkarten</h3>"+
+<h2>📚 Lernkarten</h2>
 
-"<p><b>Frage:</b> Was ist "+thema+"?</p>"+
+<p><b>1.</b> Was ist ${thema}?</p>
 
-"<p><b>Frage:</b> Erkläre "+thema+" mit eigenen Worten.</p>"+
+<p><b>2.</b> Wie funktioniert ${thema}?</p>
 
-"<p><b>Frage:</b> Warum ist "+thema+" wichtig?</p>";
+<p><b>3.</b> Warum ist ${thema} wichtig?</p>
+
+<p><b>4.</b> Welche Beispiele gibt es für ${thema}?</p>
+
+<p><b>5.</b> Welche Vor- und Nachteile hat ${thema}?</p>
+
+`;
 
 }
 
 </script>
 
 </body>
-
 </html>
