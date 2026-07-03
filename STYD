@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STRYD</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f7f3ee;
+color:#111;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:white;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+letter-spacing:4px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:100px 20px;
+background:linear-gradient(120deg,#dbeafe,#ffe4e6);
+}
+
+.hero h1{
+font-size:60px;
+margin:0;
+letter-spacing:8px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.8;
+}
+
+/* SECTION */
+
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+.title{
+font-size:30px;
+margin-bottom:30px;
+}
+
+/* PRODUCTS */
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+width:250px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card h3{
+letter-spacing:2px;
+}
+
+.price{
+color:#16a34a;
+font-weight:bold;
+}
+
+/* BUTTON */
+
+button{
+margin-top:10px;
+padding:10px 15px;
+border:none;
+background:black;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#333;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+opacity:0.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">STRYD</div>
+<div>Surf • Street • Sport</div>
+</header>
+
+<div class="hero">
+<h1>STRYD</h1>
+<p>Ride the process. Live the movement.</p>
+</div>
+
+<div class="section">
+
+<div class="title">NEW DROP</div>
+
+<div class="products">
+
+<div class="card">
+<h3>OCEAN TEE</h3>
+<p>RIDE THE PROCESS</p>
+<p class="price">29€</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>SUNSET TEE</h3>
+<p>CHASE THE SUN</p>
+<p class="price">29€</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>WAVE TEE</h3>
+<p>NO LIMITS • ONLY WAVES</p>
+<p class="price">29€</p>
+<button>Buy</button>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 STRYD • Surf Streetwear Brand
+</footer>
+
+</body>
+
+</html>
+
