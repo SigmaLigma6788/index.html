@@ -2,291 +2,76 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FYKO</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+body{margin:0;font-family:Arial;background:#f5f5f5;color:#111}
+header{display:flex;justify-content:space-between;padding:20px 40px;background:#fff;position:sticky;top:0}
+.logo{font-size:28px;font-weight:900;letter-spacing:6px}
+.hero{background:#111;color:#fff;text-align:center;padding:120px 20px}
+.hero h1{font-size:70px;letter-spacing:10px;margin:0}
+.hero p{opacity:.8;margin:20px 0}
+.hero button{padding:14px 30px;border:none;background:#fff;color:#111;border-radius:30px;font-weight:bold;cursor:pointer}
+.section{text-align:center;padding:70px 20px}
+.products{display:flex;justify-content:center;flex-wrap:wrap;gap:25px}
+.card{background:#fff;padding:25px;width:250px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.card h3{margin:10px 0}
+.price{font-size:22px;font-weight:bold}
+.card button{padding:12px 25px;background:#111;color:#fff;border:none;border-radius:25px;cursor:pointer}
+footer{background:#111;color:#fff;text-align:center;padding:35px;margin-top:60px}
+@media(max-width:700px){
+header{padding:20px}
+.hero h1{font-size:50px}
 }
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f7f5f2;
-color:#111;
-}
-
-/* HEADER */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 60px;
-background:white;
-position:sticky;
-top:0;
-box-shadow:0 5px 20px rgba(0,0,0,.05);
-z-index:100;
-}
-
-.logo{
-font-size:28px;
-font-weight:900;
-letter-spacing:8px;
-}
-
-header div:last-child{
-font-size:14px;
-letter-spacing:2px;
-color:#666;
-}
-
-/* HERO */
-
-.hero{
-height:85vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:#111;
-color:white;
-padding:20px;
-}
-
-.hero h1{
-font-size:90px;
-font-weight:900;
-letter-spacing:14px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-letter-spacing:2px;
-opacity:.8;
-margin-bottom:40px;
-}
-
-.hero button{
-padding:16px 40px;
-font-size:15px;
-font-weight:bold;
-letter-spacing:3px;
-background:white;
-color:black;
-border:none;
-border-radius:50px;
-cursor:pointer;
-transition:.3s;
-}
-
-.hero button:hover{
-transform:translateY(-4px);
-}
-
-/* SECTION */
-
-.section{
-padding:90px 30px;
-text-align:center;
-}
-
-.title{
-font-size:40px;
-font-weight:900;
-letter-spacing:6px;
-margin-bottom:50px;
-}
-
-/* PRODUCTS */
-
-.products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-}
-
-.card{
-width:280px;
-background:white;
-border-radius:25px;
-padding:30px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card img{
-width:100%;
-border-radius:18px;
-margin-bottom:20px;
-}
-
-.card h3{
-font-size:22px;
-letter-spacing:3px;
-margin-bottom:10px;
-}
-
-.card p{
-margin:8px 0;
-}
-
-.price{
-font-size:22px;
-font-weight:bold;
-color:#111;
-margin-top:15px;
-}
-
-button{
-margin-top:20px;
-padding:14px 28px;
-border:none;
-background:#111;
-color:white;
-border-radius:50px;
-font-weight:bold;
-letter-spacing:2px;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-background:#333;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:50px 20px;
-margin-top:80px;
-}
-
-footer p{
-opacity:.7;
-letter-spacing:2px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-header{
-padding:20px;
-flex-direction:column;
-gap:10px;
-}
-
-.hero h1{
-font-size:55px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.products{
-flex-direction:column;
-align-items:center;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header>
 <div class="logo">FYKO</div>
-<div>STREET • SURF • LIFESTYLE</div>
+<div>PREMIUM STREETWEAR</div>
 </header>
 
 <section class="hero">
-
 <h1>FYKO</h1>
-
-<p>BUILT DIFFERENT. MADE TO INSPIRE.</p>
-
+<p>BUILT DIFFERENT. WEAR WITH CONFIDENCE.</p>
 <button>SHOP NOW</button>
-
 </section>
 
 <section class="section">
-
-<h2 class="title">NEW DROP</h2>
+<h2>NEW DROP</h2>
 
 <div class="products">
 
 <div class="card">
-
-<img src="https://placehold.co/400x500?text=FYKO+TEE">
-
-<h3>WAVE TEE</h3>
-
-<p>GOOD WAVES • GOOD DAYS</p>
-
-<p class="price">39€</p>
-
+<h3>CLASSIC TEE</h3>
+<p>ESSENTIAL COLLECTION</p>
+<p class="price">20 CHF</p>
 <button>BUY NOW</button>
-
 </div>
 
 <div class="card">
-
-<img src="https://placehold.co/400x500?text=FYKO+TEE">
-
-<h3>FREEDOM TEE</h3>
-
-<p>SEEK FREEDOM • NOT ROUTINE</p>
-
-<p class="price">39€</p>
-
+<h3>OVERSIZED TEE</h3>
+<p>BUILT DIFFERENT</p>
+<p class="price">20 CHF</p>
 <button>BUY NOW</button>
-
 </div>
 
 <div class="card">
-
-<img src="https://placehold.co/400x500?text=FYKO+TEE">
-
-<h3>SUNSET TEE</h3>
-
-<p>RIDE MORE • WORRY LESS</p>
-
-<p class="price">39€</p>
-
+<h3>SIGNATURE TEE</h3>
+<p>FYKO WORLDWIDE</p>
+<p class="price">20 CHF</p>
 <button>BUY NOW</button>
-
 </div>
 
 </div>
-
 </section>
 
 <footer>
-
-<h2>FYKO</h2>
-
-<br>
-
-<p>© 2026 FYKO • STREETWEAR & SURF BRAND</p>
-
+<b>FYKO</b><br><br>
+© 2026 FYKO • PREMIUM STREETWEAR
 </footer>
 
 </body>
