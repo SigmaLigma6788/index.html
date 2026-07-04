@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STRYD</title>
+<title>FYKO</title>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial, sans-serif;
-background:#f7f3ee;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f5f2;
 color:#111;
 }
 
@@ -21,47 +25,83 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:25px 60px;
 background:white;
 position:sticky;
 top:0;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+z-index:100;
 }
 
 .logo{
-font-size:22px;
-font-weight:bold;
-letter-spacing:4px;
+font-size:28px;
+font-weight:900;
+letter-spacing:8px;
+}
+
+header div:last-child{
+font-size:14px;
+letter-spacing:2px;
+color:#666;
 }
 
 /* HERO */
 
 .hero{
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:100px 20px;
-background:linear-gradient(120deg,#dbeafe,#ffe4e6);
+background:#111;
+color:white;
+padding:20px;
 }
 
 .hero h1{
-font-size:60px;
-margin:0;
-letter-spacing:8px;
+font-size:90px;
+font-weight:900;
+letter-spacing:14px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
-opacity:0.8;
+font-size:20px;
+letter-spacing:2px;
+opacity:.8;
+margin-bottom:40px;
+}
+
+.hero button{
+padding:16px 40px;
+font-size:15px;
+font-weight:bold;
+letter-spacing:3px;
+background:white;
+color:black;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+}
+
+.hero button:hover{
+transform:translateY(-4px);
 }
 
 /* SECTION */
 
 .section{
-padding:60px 20px;
+padding:90px 30px;
 text-align:center;
 }
 
 .title{
-font-size:30px;
-margin-bottom:30px;
+font-size:40px;
+font-weight:900;
+letter-spacing:6px;
+margin-bottom:50px;
 }
 
 /* PRODUCTS */
@@ -70,36 +110,56 @@ margin-bottom:30px;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:20px;
+gap:30px;
 }
 
 .card{
+width:280px;
 background:white;
-padding:20px;
-width:250px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
+border-radius:25px;
+padding:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+border-radius:18px;
+margin-bottom:20px;
 }
 
 .card h3{
-letter-spacing:2px;
+font-size:22px;
+letter-spacing:3px;
+margin-bottom:10px;
+}
+
+.card p{
+margin:8px 0;
 }
 
 .price{
-color:#16a34a;
+font-size:22px;
 font-weight:bold;
+color:#111;
+margin-top:15px;
 }
 
-/* BUTTON */
-
 button{
-margin-top:10px;
-padding:10px 15px;
+margin-top:20px;
+padding:14px 28px;
 border:none;
-background:black;
+background:#111;
 color:white;
-border-radius:10px;
+border-radius:50px;
+font-weight:bold;
+letter-spacing:2px;
 cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
@@ -109,9 +169,41 @@ background:#333;
 /* FOOTER */
 
 footer{
+background:#111;
+color:white;
 text-align:center;
-padding:40px;
-opacity:0.6;
+padding:50px 20px;
+margin-top:80px;
+}
+
+footer p{
+opacity:.7;
+letter-spacing:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+padding:20px;
+flex-direction:column;
+gap:10px;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.products{
+flex-direction:column;
+align-items:center;
+}
+
 }
 
 </style>
@@ -121,50 +213,81 @@ opacity:0.6;
 <body>
 
 <header>
-<div class="logo">STRYD</div>
-<div>Surf • Street • Sport</div>
+<div class="logo">FYKO</div>
+<div>STREET • SURF • LIFESTYLE</div>
 </header>
 
-<div class="hero">
-<h1>STRYD</h1>
-<p>Ride the process. Live the movement.</p>
-</div>
+<section class="hero">
 
-<div class="section">
+<h1>FYKO</h1>
 
-<div class="title">NEW DROP</div>
+<p>BUILT DIFFERENT. MADE TO INSPIRE.</p>
+
+<button>SHOP NOW</button>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">NEW DROP</h2>
 
 <div class="products">
 
 <div class="card">
-<h3>OCEAN TEE</h3>
-<p>RIDE THE PROCESS</p>
-<p class="price">29€</p>
-<button>Buy</button>
-</div>
 
-<div class="card">
-<h3>SUNSET TEE</h3>
-<p>CHASE THE SUN</p>
-<p class="price">29€</p>
-<button>Buy</button>
-</div>
+<img src="https://placehold.co/400x500?text=FYKO+TEE">
 
-<div class="card">
 <h3>WAVE TEE</h3>
-<p>NO LIMITS • ONLY WAVES</p>
-<p class="price">29€</p>
-<button>Buy</button>
+
+<p>GOOD WAVES • GOOD DAYS</p>
+
+<p class="price">39€</p>
+
+<button>BUY NOW</button>
+
 </div>
+
+<div class="card">
+
+<img src="https://placehold.co/400x500?text=FYKO+TEE">
+
+<h3>FREEDOM TEE</h3>
+
+<p>SEEK FREEDOM • NOT ROUTINE</p>
+
+<p class="price">39€</p>
+
+<button>BUY NOW</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://placehold.co/400x500?text=FYKO+TEE">
+
+<h3>SUNSET TEE</h3>
+
+<p>RIDE MORE • WORRY LESS</p>
+
+<p class="price">39€</p>
+
+<button>BUY NOW</button>
 
 </div>
 
 </div>
+
+</section>
 
 <footer>
-© 2026 STRYD • Surf Streetwear Brand
+
+<h2>FYKO</h2>
+
+<br>
+
+<p>© 2026 FYKO • STREETWEAR & SURF BRAND</p>
+
 </footer>
 
 </body>
-
 </html>
